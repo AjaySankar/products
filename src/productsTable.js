@@ -4,11 +4,16 @@ import ProductRow from './productRow';
 class ProductsTable extends React.Component {
   constructor(props) {
     super(props);
+    this.handleDestroy = this.handleDestroy.bind(this);
+  }
+  handleDestroy(id) {
+    this.props.onDestroy(id)
   }
   render() {
-    const products = this.props.products;
-    console.log(products)
-    const productRows = Object.entries(products).map(([id, product]) => <ProductRow key={id} productData = {product}/>);
+    const {products, filterText = ' '} = this.props;
+    const productRows = Object.entries(products)
+                          .filter(([id,product]) => filterText.length === 0 || product.name.indexOf(filterText) > 0)
+                          .map(([id, product]) => <ProductRow key={id} productData = {product} onDestroy={this.handleDestroy}/>);
     return <table>
       <thead>
         <tr>

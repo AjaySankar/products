@@ -2,13 +2,17 @@ import React from 'react';
 class ProductsRow extends React.Component {
   constructor(props) {
     super(props);
+    this.destroy = this.destroy.bind(this)
+  }
+  destroy() {
+    this.props.onDestroy(this.props.productData.id);
   }
   render() {
-    const productData = this.props.productData
+    const {name, price} = this.props.productData
     return <tr>
-      <td> {productData.name} </td>
-      <td> {productData.price} </td>
-      <td> <input type="button" value="Delete"></input></td>
+      <td> {name} </td>
+      <td> {price} </td>
+      <td> <input type="button" value="Delete" onClick={this.destroy}></input> </td>
     </tr>
   }
 }
