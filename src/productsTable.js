@@ -12,7 +12,7 @@ class ProductsTable extends React.Component {
   render() {
     const {products, filterText = ' '} = this.props;
     const productRows = Object.entries(products)
-                          .filter(([id,product]) => filterText.length === 0 || product.name.indexOf(filterText) > 0)
+                          .filter(([id,product]) => filterText.length === 0 || product.name.indexOf(filterText) >= 0)
                           .map(([id, product]) => <ProductRow key={id} productData = {product} onDestroy={this.handleDestroy}/>);
     return <table>
       <thead>
