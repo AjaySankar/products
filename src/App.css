@@ -1,29 +1,7 @@
-body {
-  margin-left: 10px;
-}
-
 table {
-  border-collapse: collapse;
   margin-top: 10px;
-  width: 400px;
-}
-
-th:first-child {
-  width: 50%;
-}
-
-th:nth-child(2) {
-  width: 25%;
-}
-
-th:nth-child(3) {
-  width: 25%;
 }
 
 th, td {
   text-align: center;
-}
-
-input[type=text] {
-  margin-bottom: 10px;
 }
