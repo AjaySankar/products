@@ -5,3 +5,8 @@ table {
 th, td {
   text-align: center;
 }
+
+form {
+  max-width: 300px;
+  width: 100%;
+}
