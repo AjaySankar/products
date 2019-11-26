@@ -48,7 +48,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="container">
         <h1> My Inventory </h1>
         <SearchBox onFilter={this.handleFilter}/>
         <ProductTable products={this.state.inventoryData} filterText = {this.state.filterText} onDestroy={this.handleDestroy}/>

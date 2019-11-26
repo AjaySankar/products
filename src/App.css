@@ -20,11 +20,7 @@ th:nth-child(3) {
   width: 25%;
 }
 
-table, th, td {
-  border: 1px solid black;
-}
-
-td {
+th, td {
   text-align: center;
 }
 

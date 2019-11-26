@@ -14,11 +14,14 @@ class ProductsTable extends React.Component {
     const productRows = Object.entries(products)
                           .filter(([id,product]) => filterText.length === 0 || product.name.indexOf(filterText) >= 0)
                           .map(([id, product]) => <ProductRow key={id} productData = {product} onDestroy={this.handleDestroy}/>);
-    return <table>
-      <thead>
+    return <table class="table table-striped">
+      <thead class="thead-dark">
         <tr>
           <th>
             Name 
+          </th> 
+          <th>
+            Category 
           </th> 
           <th> 
             Price 

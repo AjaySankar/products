@@ -34,12 +34,12 @@ class ProductForm extends React.Component {
     return <form>
       <h4> Enter a new product </h4>
       <label>Name: </label> <br/>
-      <input type="text" name="name" onChange={this.handleChange} value={this.state.product.name} placeholder="Enter product name here"></input> <br/>
+      <input type="text" class="form-control" name="name" onChange={this.handleChange} value={this.state.product.name} placeholder="Enter product name here"></input> <br/>
       <label>Category: </label> <br/>
-      <input type="text" name="category" onChange={this.handleChange} value={this.state.product.category} placeholder="Enter product category"></input> <br/>
+      <input type="text" class="form-control" name="category" onChange={this.handleChange} value={this.state.product.category} placeholder="Enter product category"></input> <br/>
       <label>Price: </label> <br/>
-      <input type="text" name="price" onChange={this.handleChange} value={this.state.product.price} placeholder="Enter product price"></input> <br/>
-      <input type="submit" value="Save" onClick={this.handleSave}></input>
+      <input type="text" class="form-control" name="price" onChange={this.handleChange} value={this.state.product.price} placeholder="Enter product price"></input> <br/>
+      <input type="submit" class="btn btn-primary" value="Save" onClick={this.handleSave}></input>
     </form>;
   }
 }

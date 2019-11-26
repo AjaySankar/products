@@ -13,7 +13,7 @@ class SearchBox extends React.Component {
     });
   }
   render() {
-    return <form> <input name="filterText" onChange={this.handleChange} type="text" placeholder="Search..."></input> </form>;
+    return <form> <input name="filterText" class="form-control" onChange={this.handleChange} type="text" placeholder="Search..."></input> </form>;
   }
 }
 

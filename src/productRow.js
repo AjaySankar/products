@@ -8,11 +8,12 @@ class ProductsRow extends React.Component {
     this.props.onDestroy(this.props.productData.id);
   }
   render() {
-    const {name, price} = this.props.productData
+    const {name, price, category} = this.props.productData
     return <tr>
       <td> {name} </td>
+      <td> {category} </td>
       <td> {price} </td>
-      <td> <input type="button" value="Delete" onClick={this.destroy}></input> </td>
+      <td> <input class="btn btn-primary" type="button" value="Delete" onClick={this.destroy}></input> </td>
     </tr>
   }
 }
